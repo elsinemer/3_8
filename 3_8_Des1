@@ -1,0 +1,17 @@
+# Nueva función que suma y promedia los valores de una lista
+def cuentas(numeros):
+    suma = sum(numeros)
+    promedio = suma / len(numeros) if numeros else 0
+    return suma, promedio
+
+# El usuario ingresa los números separados por espacios a la variable numeros
+numeros = input("Ingresa los números separados por espacios: ")
+
+# Convertir la cadena de entrada en una lista de números
+lista_numeros = list(map(float, numeros.split()))
+
+# Calcular la suma y el promedio usando la función
+suma, promedio = cuentas(lista_numeros)
+
+# Imprimir
+print(f"Suma: {suma}, Promedio: {promedio}")
