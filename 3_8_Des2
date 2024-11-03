@@ -1,0 +1,13 @@
+# Se define una función que convierte la primera letra de cada palabra en mayúscula usando title
+def mayus(cadena):
+    return cadena.title()
+
+# Solicitar al usuario que ingrese una cadena de texto
+t# Solicitar al usuario que ingrese una cadena de texto
+texto = input("Ingresa una cadena de texto: ")
+
+# Se ejecuta la función mayus
+resultado = mayus(texto)
+
+# Imprimir el resultado
+print(f"Cadena capitalizada: {resultado}")
