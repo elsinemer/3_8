@@ -1,0 +1,33 @@
+#Primero creamos una función que determine si un número es primo o no. 
+def primo(numero):
+  if numero < 2:
+      #Un número es primo si es mayor que 1 y no tiene divisores distintos de 1 y de sí mismo.
+      return False
+  for i in range(2, int(numero ** 0.5) + 1):
+      if numero % i == 0:
+          return False
+  return True
+#Luego creamos que cuente en la lista los números primos aplicando la función anterior llamada "primo"
+def contar(lista):
+  contador = 0
+  for numero in lista:
+      if primo(numero):
+          contador += 1
+  return contador
+
+def main():
+  # Pedimos que se ingrese una lista de números separados por espacios
+  numeros = input("Ingresa una lista de números separados por espacios: ")
+
+  # Se convierte la cadena de entrada en una lista de enteros
+  lista_numeros = list(map(int, numeros.split()))
+
+  # Contar cuántos números primos hay en la lista aplicando la función contar
+  cantidad_primos = contar(lista_numeros)
+
+  # Imprimir los resultados
+  print(f"La lista contiene {cantidad_primos} números primos.")
+
+# Ejecutar el programa
+if __name__ == "__main__":
+  main()
