@@ -1,0 +1,13 @@
+def es_palindromo(cadena):
+    # Eliminar espacios y convertir a minúsculas para una comparación uniforme
+    cadena = cadena.replace(" ", "").lower()
+    return cadena == cadena[::-1]
+
+# Solicitar al usuario que ingrese una cadena de texto
+texto = input("Ingresa una cadena de texto: ")
+
+# Verificar si la cadena es un palíndromo
+resultado = es_palindromo(texto)
+
+# Imprimir el resultado
+print(f"¿Es la cadena un palíndromo? {'Sí' if resultado else 'No'}")
