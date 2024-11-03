@@ -1,0 +1,17 @@
+# Desafío 3: Función para verificar elementos en común entre dos listas
+
+def tienen_elemento_comun(lista1, lista2):
+    for elemento in lista1:
+        if elemento in lista2:
+            return True
+    return False
+
+# Ejemplo de uso de la función
+lista1 = input("Ingresa la primera lista de elementos separados por espacios: ").split()
+lista2 = input("Ingresa la segunda lista de elementos separados por espacios: ").split()
+
+# Verificar si tienen al menos un elemento en común
+resultado = tienen_elemento_comun(lista1, lista2)
+
+# Imprimir el resultado
+print(f"¿Las listas tienen al menos un elemento en común? {resultado}")
